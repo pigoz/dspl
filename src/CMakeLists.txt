@@ -1,0 +1,5 @@
+find_library(APP_SERVICES_LIBRARY ApplicationServices)
+set(EXTRA_LIBS ${APP_SERVICES_LIBRARY})
+mark_as_advanced(APP_SERVICES_LIBRARY)
+add_executable(dspl main.c)
+target_link_libraries(dspl ${EXTRA_LIBS})
